@@ -1,0 +1,42 @@
+{
+  "rooms": [
+    {
+      "id": "start",
+      "name": "My Cage",
+      "description": "You are in a metal rusty cage dangling from the ceiling. Offering just enough space to contain you, your body pushes against the cold metal of this prison. Through the bars you see the alcove and a part of the dark hallway it is placed in.",
+      "exits": [
+        {"name": "exit", "description": "The door of your cage is unlocked, giving you the option to leave this prison", "destination": "alcove", "aliases": ["out"]}
+      ],
+      "objects": [
+        {"name": "faeces", "description": "The solid floor of the cage is filled with faeces in different states of decomosition. You see some insects and maggets moving inside.", "aliases": ["poop"]},
+        {"name": "carving", "description": "On the cages outside some letters are carved into it. You cannot understand what they mean"}
+      ],
+      "creatures": []
+    },
+    {
+      "id": "alcove",
+      "name": "Dark alcove",
+      "description": "Beside a hanging cage you are in a small alcove in a wall of a hallway. The alcove is illuminated only by some faint glowing mold growing in the crevices of the rough stone bricks the walls are made of. The only sound you hear is the quiet sound of the metal cain holding the cage, and the hush of air moving across the dark hallway.",
+      "exits": [
+        {"name": "cage", "description": "Suspended from above with a cain is a metal human-sized cage with its door ajar.", "destination": "start", "aliases": []},
+        {"name": "hallway", "description": "Outside of the alcove is a long and poorly illuminated hallway. It extends to the left and right.", "destination": "hallway", "aliases": ["out"]}
+      ],
+      "objects": [
+        {"name": "hole", "description": "A tiny hole on the floor height is placed on the inside wall of the alcove. It looks like badly hewn drain, or a mice tunnel.", "aliases": []},
+        {"name": "mold", "description": "A fainly glowing mold is covering the floors crevices. The luminescence moves in waves like a disturbed pool of water", "aliases": []}
+      ],
+      "creatures": []
+    },
+    {
+      "id": "hallway",
+      "name": "Long Hallway",
+      "description": "You are in the center of a long dark hallway. Half of the floor is scattered with a luminescent mold. The other half lies in complete darkness. A cold hush of air moves through, pushing from the dark side.",
+      "exits": [
+        {"name": "dark", "description": "A path into complete darkness. Cold wind is flowing from this side.", "destination": "darkroom", "aliases": []},
+        {"name": "luminescent", "description": "A slightly illuminated floor leading towards a room in the distance. Cold wind is flowing down this side.", "destination": "wellroom", "aliases": []}
+      ],
+      "objects": [],
+      "creatures": []
+    }
+  ]
+}

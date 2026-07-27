@@ -1,0 +1,7 @@
+[project]
+name = "crawlspace"
+version = "0.0.0"
+dependencies = ["textual"]
+
+[project.scripts]
+crawlspace = "crawlspace.main:run"

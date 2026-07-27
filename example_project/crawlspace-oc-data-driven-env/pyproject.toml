@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crawlspace"
+version = "0.0.0"
+description = "A terminal-based dungeon crawler game"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = ["textual"]
+
+[project.scripts]
+crawlspace = "crawlspace.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["crawlspace"]

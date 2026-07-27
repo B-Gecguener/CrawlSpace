@@ -1,0 +1,140 @@
+{
+  "templates": {
+    "human": {
+      "torso": {
+        "type": "torso",
+        "attached": ["neck", "arm_left", "arm_right", "leg_left", "leg_right"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "neck": {
+        "type": "neck",
+        "attached": ["head"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "head": {
+        "type": "head",
+        "attached": ["eye_left", "eye_right", "ear_left", "ear_right", "nose", "mouth"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true,
+        "critical": true
+      },
+      "eye_left": {"type": "eye", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true, "critical": true},
+      "eye_right": {"type": "eye", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true, "critical": true},
+      "ear_left": {"type": "ear", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true},
+      "ear_right": {"type": "ear", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true},
+      "nose": {"type": "nose", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "mouth": {"type": "mouth", "attached": ["tooth_left_a", "tooth_left_b", "tooth_right_a", "tooth_right_b", "tongue"], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true},
+      "tooth_left_a": {"type": "tooth", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": false, "can_be_bruised": false},
+      "tooth_left_b": {"type": "tooth", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": false, "can_be_bruised": false},
+      "tooth_right_a": {"type": "tooth", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": false, "can_be_bruised": false},
+      "tooth_right_b": {"type": "tooth", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": false, "can_be_bruised": false},
+      "tongue": {"type": "tongue", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": false, "critical": true},
+      "arm_left": {
+        "type": "arm",
+        "attached": ["hand_left"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "arm_right": {
+        "type": "arm",
+        "attached": ["hand_right"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "hand_left": {
+        "type": "hand",
+        "attached": ["finger_left_a", "finger_left_b", "finger_left_c", "finger_left_d", "thumb_left"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "hand_right": {
+        "type": "hand",
+        "attached": ["finger_right_a", "finger_right_b", "finger_right_c", "finger_right_d", "thumb_right"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "finger_left_a": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_left_b": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_left_c": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_left_d": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "thumb_left": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_right_a": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_right_b": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_right_c": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "finger_right_d": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "thumb_right": {"type": "finger", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "leg_left": {
+        "type": "leg",
+        "attached": ["foot_left"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "leg_right": {
+        "type": "leg",
+        "attached": ["foot_right"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "foot_left": {"type": "foot", "attached": ["toe_left_a", "toe_left_b", "toe_left_c", "toe_left_d", "toe_left_e"], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true},
+      "foot_right": {"type": "foot", "attached": ["toe_right_a", "toe_right_b", "toe_right_c", "toe_right_d", "toe_right_e"], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": true},
+      "toe_left_a": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_left_b": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_left_c": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_left_d": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_left_e": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_right_a": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_right_b": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_right_c": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_right_d": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false},
+      "toe_right_e": {"type": "toe", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": false}
+    },
+    "spider": {
+      "cephalothorax": {
+        "type": "cephalothorax",
+        "attached": ["leg_left_a", "leg_left_b", "leg_left_c", "leg_right_a", "leg_right_b", "leg_right_c", "fang_left", "fang_right"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true,
+        "critical": true
+      },
+      "abdomen": {
+        "type": "abdomen",
+        "attached": ["spinneret"],
+        "quality": 1.0,
+        "can_be_broken": true,
+        "can_be_cut": true,
+        "can_be_bruised": true
+      },
+      "leg_left_a": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "leg_left_b": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "leg_left_c": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "leg_right_a": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "leg_right_b": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "leg_right_c": {"type": "leg", "attached": [], "quality": 1.0, "can_be_broken": true, "can_be_cut": true, "can_be_bruised": true},
+      "fang_left": {"type": "fang", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": false},
+      "fang_right": {"type": "fang", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": false},
+      "spinneret": {"type": "spinneret", "attached": [], "quality": 1.0, "can_be_broken": false, "can_be_cut": true, "can_be_bruised": false}
+    }
+  }
+}
