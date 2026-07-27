@@ -10,4 +10,4 @@ look at Story.md for room details
 
 `help`: list commands
 `move [direction]`: Move to adjacent room
-`look [target]`: Describe room or object
+`check [target]`: Describe room or object
