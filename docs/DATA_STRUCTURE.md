@@ -1,36 +1,39 @@
 # Folder Structure Example:
 
 /data/
-  /rooms/
-    startroom.json
-    hallway.json
-    crypt.json
-    hallway2.json
-    staircase.json
-    hallway3.json
-    crypt2.json
-    ...
-  /exits/
-    door.json
-    door2.json
-    crawlspace.json
-    trapdoor.json
-    door3.json
-    hole.json
-    ...
-  /entities/
-    goblin.json
-    goblin2.json
-    goblin3.json
-    dragon.json
-    hobo.json
-    hobo2.json
-  /objects/
-    flask.json
-    sword.json
-    sword2.json
-    book.json
-    necronomicon.json
+  /lvl_mvp/
+    /rooms/
+      startroom.json
+      hallway.json
+      crypt.json
+      hallway2.json
+      staircase.json
+      hallway3.json
+      crypt2.json
+      ...
+    /exits/
+      door.json
+      door2.json
+      crawlspace.json
+      trapdoor.json
+      door3.json
+      hole.json
+      ...
+    /entities/
+      goblin.json
+      goblin2.json
+      goblin3.json
+      dragon.json
+      hobo.json
+      hobo2.json
+    /objects/
+      flask.json
+      sword.json
+      sword2.json
+      book.json
+      necronomicon.json
+      ...
+  /lvl_1/
     ...
 
 # JSON Structure:
