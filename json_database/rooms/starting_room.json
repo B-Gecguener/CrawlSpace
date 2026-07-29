@@ -1,0 +1,12 @@
+{
+    "name": "Dungeon Entrance",
+    "fragments": {
+      "see": ["dark stone entrance", "cracks in the walls"],
+      "hear": ["footsteps echo against stone"],
+      "smell": ["stale air"],
+      "feel": ["rough stone surface"]
+    },
+    "exits": ["door","trapdoor","door2"],
+    "objects": ["sword12","torch4","Necronomicon"],
+    "creatures": ["giant_spider","giant_spider2"]
+}
