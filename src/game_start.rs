@@ -1,10 +1,17 @@
+use crate::cmds;
+use crate::cmd_interpreter::CommandFn;
 use crate::helper::get_user_input;
+use std::collections::HashMap;
 use std::{fs, path::PathBuf};
 
-pub fn game_start() -> PathBuf {
+
+pub fn game_start() -> (PathBuf, HashMap<String, CommandFn>) {
     greet_user();
 
-    level_selection()
+    let level = level_selection();
+    let commands = create_command_map();
+
+    (level, commands)
 }
 
 fn greet_user() {
@@ -34,7 +41,7 @@ fn level_selection() -> PathBuf {
     let levels: Vec<PathBuf> = get_levels();
 
     loop {
-        // Rust mag "while true" nicht, loop ist anscheinden der weg für endlos-loops
+        // Rust mag "while true" nicht, loop ist anscheinend der Weg für Endlos-Loops
         println!();
         println!("Available levels:");
 
@@ -57,4 +64,16 @@ fn level_selection() -> PathBuf {
 
         println!("Level '{}' does not exist.", input);
     }
+}
+
+fn create_command_map() -> HashMap<String, CommandFn> {
+    println!("Loading commands ...");
+    let mut command_map: HashMap<String, CommandFn> = HashMap::new();
+
+    command_map.insert("help".into(), cmds::help::execute);
+    command_map.insert("move".into(), cmds::move_::execute);
+    command_map.insert("check".into(), cmds::check::execute);
+
+    println!("Commands loaded.");
+    command_map
 }

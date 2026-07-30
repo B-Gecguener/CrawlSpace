@@ -1,3 +1,3 @@
 pub fn execute(args: Vec<String>) -> String {
-    "Showing help".into()
+    "Moving".into()
 }

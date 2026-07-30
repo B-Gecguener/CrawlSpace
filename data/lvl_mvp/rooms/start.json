@@ -6,7 +6,7 @@
       "smell": ["stale air"],
       "feel": ["rough stone surface"]
     },
-    "exits": ["door","trapdoor","door2"],
-    "objects": ["sword12","torch4","Necronomicon"],
-    "creatures": ["giant_spider","giant_spider2"]
+    "exits": ["door"],
+    "objects": [],
+    "creatures": []
 }
