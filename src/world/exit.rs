@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use crate::room::Fragments;
 
 #[derive(Serialize, Deserialize)]
-struct Exit {
+pub struct Exit {
     name: String,
     room_A: String,
     room_B: String,
@@ -12,7 +12,7 @@ struct Exit {
 }
 
 #[derive(Serialize, Deserialize)]
-struct ExitSide {
+pub struct ExitSide {
     fragments: Fragments,
     use_requirements: Vec<String>,
     check_requirements: Vec<String>,

@@ -12,12 +12,12 @@ use std::{
     collections::HashMap,
 };
 
-struct GameState {
+pub struct GameState {
     current_room: String,
     level: Level,
 }
 
-struct Level {
+pub struct Level {
     rooms: Vec<Room>,
     exits: Vec<Exit>,
     items: Vec<Items>,

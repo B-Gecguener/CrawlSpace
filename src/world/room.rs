@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use serde_json::Result;
 
 #[derive(Serialize, Deserialize)]
-struct Fragments {
+pub struct Fragments {
     see: Vec<String>,
     hear: Vec<String>,
     smell: Vec<String>,
@@ -10,7 +10,7 @@ struct Fragments {
 }
 
 #[derive(Serialize, Deserialize)]
-struct Room {
+pub struct Room {
     name: String,
     fragments: Fragments,
     exits: Vec<String>,
