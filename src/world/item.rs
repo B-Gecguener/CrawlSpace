@@ -1,23 +1,25 @@
 use serde::{Deserialize, Serialize};
 use serde_json;
-use std::path::PathBuf;
-use std::fs::File;
+use std::{
+    error::Error,
+    fs::File,
+    path::PathBuf,
+};
 
 #[derive(Serialize,Deserialize)]
 pub struct Item {
     name: String,
 }
 
-pub fn load_item(item: String, level: PathBuf) -> Item {
+pub fn load_item(item: String, level: PathBuf) -> Result<Item, Box<dyn Error>> {
 
-    let path: PathBuf = 
-        level
+    let path = level
         .join("items")
-        .join(item+".json");
+        .join(format!("{item}.json"));
 
-    let file = File::open(path);
+    let file = File::open(path)?;
 
-    let i: Item = serde_json::from_str(file)?;
-    
-    i
+    let i = serde_json::from_reader(file)?;
+
+    Ok(i)
 }
