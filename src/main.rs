@@ -1,6 +1,7 @@
 mod cmd_interpreter;
 mod game_loop;
 mod game_start;
+mod helper;
 
 use game_start::game_start;
 

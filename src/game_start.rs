@@ -1,4 +1,5 @@
-use std::{fs, io, path::PathBuf};
+use crate::helper::get_user_input;
+use std::{fs, path::PathBuf};
 
 pub fn game_start() -> PathBuf {
     greet_user();
@@ -9,16 +10,6 @@ pub fn game_start() -> PathBuf {
 fn greet_user() {
     println!("Hello, Adventurer!");
     println!("Welcome to CrawlSpace.");
-}
-
-pub fn get_user_input() -> String {
-    let mut input = String::new();
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read input");
-
-    input.trim().to_owned() // Der Rust-"Style", das letzte Statement ohne ";" wird automatisch returned
 }
 
 fn get_levels() -> Vec<PathBuf> {
