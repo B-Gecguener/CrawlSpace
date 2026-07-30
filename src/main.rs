@@ -1,3 +1,6 @@
+mod game_loop;
+mod cmd_interpreter;
+
 use std::{
     fs,
     io,
@@ -7,10 +10,9 @@ use std::{
 fn main() {
     greet_user();
 
-    let level = level_selection();
+    let level: PathBuf = level_selection();
 
-    println!("Selected level:");
-    println!("{}", level.display());
+    game_loop::run(level);
 }
 
 fn greet_user() {
@@ -18,7 +20,7 @@ fn greet_user() {
     println!("Welcome to CrawlSpace.");
 }
 
-fn get_user_input() -> String {
+pub fn get_user_input() -> String {
     let mut input = String::new();
 
     io::stdin()
