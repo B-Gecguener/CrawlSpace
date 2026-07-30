@@ -1,0 +1,25 @@
+{
+    "name": "Crawlspace",
+    "room_A": "startroom",
+    "room_B": "hallway",
+    "A": {
+        "fragments": {
+            "see": ["a hole at the bottom of the wall"],
+            "hear": ["a faint breeze of fresh air"],
+            "smell": ["dust in the air"],
+            "feel": ["rough stone surface"]
+        },
+        "use_requirements": ["key1"],
+        "check_requirements": ["light"]
+    },
+    "B": {
+        "fragments": {
+            "see": ["a hole at the bottom of the wall"],
+            "hear": ["a faint breeze of fresh air"],
+            "smell": ["dust in the air"],
+            "feel": ["rough stone surface"]
+        },
+        "use_requirements": ["key1"],
+        "check_requirements": ["light"]
+    }
+}
