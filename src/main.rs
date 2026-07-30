@@ -9,25 +9,13 @@ use std::{
 
 fn main() {
     greet_user();
-
-    let level: PathBuf = level_selection();
-
+    let level: PathBuf = level_selection(get_levels());
     game_loop::run(level);
 }
 
 fn greet_user() {
     println!("Hello, Adventurer!");
     println!("Welcome to CrawlSpace.");
-}
-
-pub fn get_user_input() -> String {
-    let mut input = String::new();
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read input");
-
-    input.trim().to_owned() // Der Rust-"Style", das letzte Statement ohne ";" wird automatisch returned
 }
 
 fn get_levels() -> Vec<PathBuf> {
@@ -49,8 +37,7 @@ fn get_levels() -> Vec<PathBuf> {
     levels
 }
 
-fn level_selection() -> PathBuf {
-    let levels: Vec<PathBuf> = get_levels();
+fn level_selection(levels: Vec<PathBuf>) -> PathBuf {
 
     loop { // Rust mag "while true" nicht, loop ist anscheinden der weg für endlos-loops
         println!();
@@ -81,4 +68,14 @@ fn level_selection() -> PathBuf {
 
         println!("Level '{}' does not exist.", input);
     }
+}
+
+pub fn get_user_input() -> String {
+    let mut input = String::new();
+
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read input");
+
+    input.trim().to_owned() // Der Rust-"Style", das letzte Statement ohne ";" wird automatisch returned
 }
