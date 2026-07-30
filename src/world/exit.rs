@@ -9,11 +9,12 @@ use std::{
 
 #[derive(Serialize,Deserialize)]
 pub struct Exit {
-    name: String,
-    room_a: String,
-    room_b: String,
-    a: ExitSide,
-    b: ExitSide,
+    pub id: String,
+    pub name: String,
+    pub room_a: String,
+    pub room_b: String,
+    pub a: ExitSide,
+    pub b: ExitSide,
 }
 
 #[derive(Serialize, Deserialize)]

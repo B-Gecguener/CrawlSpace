@@ -1,4 +1,5 @@
 {
+    "id": "hallway",
     "name": "Hallway",
     "fragments": {
       "see": ["long dark hallway", "damp stone walls"],
@@ -6,7 +7,7 @@
       "smell": ["damp air"],
       "feel": ["rough stone surface"]
     },
-    "exits": ["door"],
+    "exits": ["entrance"],
     "objects": [],
     "creatures": []
 }

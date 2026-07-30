@@ -41,7 +41,8 @@
 ## Rooms
 ```json
 {
-    "name": "Dungeon Entrance",
+    "id": "start", // This has to be EXACTLY the same string like the filename
+    "name": "Dungeon Entrance", // Ingame Name
     "fragments": {
       "see": ["dark stone entrance", "cracks in the walls"],
       "hear": ["footsteps echo against stone"],
@@ -60,7 +61,8 @@ to find the file. So the id of the objects are thier file-names
 ## Exits
 ```json
 {
-    "name": "Crawlspace",
+    "id": "crawlspace", // This has to be EXACTLY the same string like the filename
+    "name": "Crawlspace", // Ingame Name
     "room_A": "startroom",
     "room_B": "hallway",
     "A": {

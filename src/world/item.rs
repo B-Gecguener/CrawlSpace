@@ -8,7 +8,8 @@ use std::{
 
 #[derive(Serialize,Deserialize)]
 pub struct Item {
-    name: String,
+    pub id: String,
+    pub name: String,
 }
 
 pub fn load_item(item: String, level: PathBuf) -> Result<Item, Box<dyn Error>> {

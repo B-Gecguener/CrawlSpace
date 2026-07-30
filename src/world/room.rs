@@ -8,22 +8,23 @@ use std::{
 
 #[derive(Serialize, Deserialize)]
 pub struct Fragments {
-    see: Vec<String>,
-    hear: Vec<String>,
-    smell: Vec<String>,
-    feel: Vec<String>
+    pub see: Vec<String>,
+    pub hear: Vec<String>,
+    pub smell: Vec<String>,
+    pub feel: Vec<String>
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Room {
-    name: String,
-    fragments: Fragments,
-    exits: Vec<String>,
-    objects: Vec<String>,
-    creatures: Vec<String>
+    pub id: String,
+    pub name: String,
+    pub fragments: Fragments,
+    pub exits: Vec<String>,
+    pub objects: Vec<String>,
+    pub creatures: Vec<String>
 }
 
-fn load_room(room: String, level: PathBuf) -> Result<Room, Box<dyn Error>> {
+pub fn load_room(room: String, level: PathBuf) -> Result<Room, Box<dyn Error>> {
 
     let path = level
         .join("rooms")

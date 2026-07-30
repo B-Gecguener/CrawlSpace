@@ -1,10 +1,11 @@
 {
-    "name": "Crawlspace",
+    "id": "entrance",
+    "name": "Dungeon Gate",
     "room_A": "startroom",
     "room_B": "hallway",
     "A": {
         "fragments": {
-            "see": ["a hole at the bottom of the wall"],
+            "see": ["Front of a great stone Gate"],
             "hear": ["a faint breeze of fresh air"],
             "smell": ["dust in the air"],
             "feel": ["rough stone surface"]
