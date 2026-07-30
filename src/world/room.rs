@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
-use serde_json::Result;
+use std::path::PathBuf;
+use serde_json;
+use std::fs::File;
 
 #[derive(Serialize, Deserialize)]
 pub struct Fragments {
@@ -18,14 +20,12 @@ pub struct Room {
     creatures: Vec<String>
 }
 
-fn load_room(room: String, level: String) -> Room {
+fn load_room(room: String, level: PathBuf) -> Room {
 
-    let path: Path = Path::new(
-        "/data/"
-        .to_string()
-        .join(level)
+    let path: PathBuf = 
+        level
         .join("rooms")
-        .join(room+".json"));
+        .join(room+".json");
 
     let file = File::open(path);
 

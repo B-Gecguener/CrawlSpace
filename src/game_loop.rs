@@ -1,16 +1,9 @@
-use crate::world::room::{Room, Fragments};
-use crate::world::exits::{Exit, ExitSide};
-use crate::cmd_interpreter::CommandFn;
+use crate::world::room::Room;
+use crate::world::exit::Exit;
+use crate::world::item::Item;
 use crate::game_start::game_start;
 use crate::helper::get_user_input;
 use crate::cmd_interpreter;
-use crate::cmds;
-use crate::world;
-
-use std::{
-    path::PathBuf,
-    collections::HashMap,
-};
 
 pub struct GameState {
     current_room: String,
@@ -20,7 +13,7 @@ pub struct GameState {
 pub struct Level {
     rooms: Vec<Room>,
     exits: Vec<Exit>,
-    items: Vec<Items>,
+    items: Vec<Item>,
 }
 
 pub fn run() {
@@ -31,11 +24,14 @@ pub fn run() {
         level.file_name().unwrap().to_string_lossy()
     );
     
-    let state: GameState = GameState { current_room: "start".to_string(), };
+    let state: GameState = GameState { 
+        current_room: "start".to_string(), 
+        level: Level { rooms: Vec::new(), exits: Vec::new(), items: Vec::new() }
+    };
     
     // Game loop
     loop {
-        let output: String = cmd_interpreter::interpret_command(get_user_input(), &command_map);
+        let output: String = cmd_interpreter::interpret_command(get_user_input(), &command_map, &state);
         println!("{}", output);
     };
 }

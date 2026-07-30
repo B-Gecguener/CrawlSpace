@@ -1,21 +1,19 @@
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::path::PathBuf;
-use crate::room::Fragments;
+use std::fs::File;
 
 #[derive(Serialize,Deserialize)]
 pub struct Item {
     name: String,
 }
 
-pub fn load_exit(exit: String, level: String) -> Item {
+pub fn load_item(item: String, level: PathBuf) -> Item {
 
     let path: PathBuf = 
-        "/data/"
-        .to_string()
-        .join(level)
-        .join("exits")
-        .join(exit+".json");
+        level
+        .join("items")
+        .join(item+".json");
 
     let file = File::open(path);
 

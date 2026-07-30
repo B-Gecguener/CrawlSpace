@@ -1,8 +1,9 @@
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
-use crate::room::Fragments;
+use std::fs::File;
+use crate::world::room::Fragments;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize,Deserialize)]
 pub struct Exit {
     name: String,
     room_A: String,
@@ -18,12 +19,10 @@ pub struct ExitSide {
     check_requirements: Vec<String>,
 }
 
-pub fn load_exit(exit: String, level: String) -> Exit {
+pub fn load_exit(exit: String, level: PathBuf) -> Exit {
 
     let path: PathBuf = 
-        "/data/"
-        .to_string()
-        .join(level)
+        level
         .join("exits")
         .join(exit+".json");
 

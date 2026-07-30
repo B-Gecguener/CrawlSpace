@@ -1,10 +1,11 @@
 // cmd_interpreter ist dafür zuständig commands zu erkennen und auszuführen
 
 use std::{collections::HashMap/*, os::raw::c_double*/};
+use crate::game_loop::GameState;
 
 pub type CommandFn = fn(Vec<String>) -> String;
 
-pub fn interpret_command(cmd: String, cmd_map: &HashMap<String, CommandFn>) -> String {
+pub fn interpret_command(cmd: String, cmd_map: &HashMap<String, CommandFn>, state: &GameState) -> String {
     let mut parts = cmd.split_whitespace();
 
     let command = match parts.next() {
