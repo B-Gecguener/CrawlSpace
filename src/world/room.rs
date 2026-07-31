@@ -6,7 +6,7 @@ use std::{
     path::PathBuf,
 };
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Fragments {
     pub see: Vec<String>,
     pub hear: Vec<String>,
@@ -14,7 +14,7 @@ pub struct Fragments {
     pub feel: Vec<String>
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Room {
     pub id: String,
     pub name: String,
