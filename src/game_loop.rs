@@ -9,14 +9,14 @@ use crate::helper::get_user_input;
 use crate::cmd_interpreter;
 
 pub struct GameState {
-    current_room: String,
-    level: Level,
+    pub current_room: String,
+    pub level: Level,
 }
 
 pub struct Level {
-    rooms: HashMap<String, Room>,
-    exits: HashMap<String, Exit>,
-    items: HashMap<String, Item>,
+    pub rooms: HashMap<String, Room>,
+    pub exits: HashMap<String, Exit>,
+    pub items: HashMap<String, Item>,
 }
 
 pub fn run() {
