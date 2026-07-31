@@ -1,0 +1,13 @@
+{
+    "id": "hallway",
+    "name": "Hallway",
+    "fragments": {
+      "see": ["long dark hallway", "damp stone walls"],
+      "hear": ["distant dripping"],
+      "smell": ["damp air"],
+      "feel": ["rough stone surface"]
+    },
+    "exits": ["entrance"],
+    "objects": [],
+    "creatures": []
+}
