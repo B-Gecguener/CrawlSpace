@@ -63,9 +63,9 @@ to find the file. So the id of the objects are thier file-names
 {
     "id": "crawlspace", // This has to be EXACTLY the same string like the filename
     "name": "Crawlspace", // Ingame Name
-    "room_A": "startroom",
-    "room_B": "hallway",
-    "A": {
+    "room_a": "startroom",
+    "room_b": "hallway",
+    "a": {
         "fragments": {
             "see": ["a hole at the bottom of the wall"],
             "hear": ["a faint breeze of fresh air"],
@@ -75,7 +75,7 @@ to find the file. So the id of the objects are thier file-names
         "use_requirements": ["key1"],
         "check_requirements": ["light"]
     },
-    "B": {
+    "b": {
         "fragments": {
             "see": ["a hole at the bottom of the wall"],
             "hear": ["a faint breeze of fresh air"],
