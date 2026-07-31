@@ -1,36 +1,39 @@
 # Folder Structure Example:
 
 /data/
-  /rooms/
-    startroom.json
-    hallway.json
-    crypt.json
-    hallway2.json
-    staircase.json
-    hallway3.json
-    crypt2.json
-    ...
-  /exits/
-    door.json
-    door2.json
-    crawlspace.json
-    trapdoor.json
-    door3.json
-    hole.json
-    ...
-  /entities/
-    goblin.json
-    goblin2.json
-    goblin3.json
-    dragon.json
-    hobo.json
-    hobo2.json
-  /objects/
-    flask.json
-    sword.json
-    sword2.json
-    book.json
-    necronomicon.json
+  /lvl_mvp/
+    /rooms/
+      startroom.json
+      hallway.json
+      crypt.json
+      hallway2.json
+      staircase.json
+      hallway3.json
+      crypt2.json
+      ...
+    /exits/
+      door.json
+      door2.json
+      crawlspace.json
+      trapdoor.json
+      door3.json
+      hole.json
+      ...
+    /entities/
+      goblin.json
+      goblin2.json
+      goblin3.json
+      dragon.json
+      hobo.json
+      hobo2.json
+    /objects/
+      flask.json
+      sword.json
+      sword2.json
+      book.json
+      necronomicon.json
+      ...
+  /lvl_01/
     ...
 
 # JSON Structure:
@@ -58,9 +61,9 @@ to find the file. So the id of the objects are thier file-names
 ```json
 {
     "name": "Crawlspace",
-    "room_A": "startroom",
-    "room_B": "hallway",
-    "A": {
+    "room_a": "startroom",
+    "room_b": "hallway",
+    "b": {
         "fragments": {
             "see": ["a hole at the bottom of the wall"],
             "hear": ["a faint breeze of fresh air"],
@@ -70,7 +73,7 @@ to find the file. So the id of the objects are thier file-names
         "use_requirements": ["key1"],
         "check_requirements": ["light"]
     },
-    "B": {
+    "a": {
         "fragments": {
             "see": ["a hole at the bottom of the wall"],
             "hear": ["a faint breeze of fresh air"],
