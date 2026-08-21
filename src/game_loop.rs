@@ -27,11 +27,11 @@ pub fn run() {
         level.file_name().unwrap().to_string_lossy()
     );
 
-    let state: GameState = create_level(level);
+    let mut state: GameState = create_level(level);
     
     // Game loop
     loop {
-        let output: String = cmd_interpreter::interpret_command(get_user_input(), &command_map, &state);
+        let output: String = cmd_interpreter::interpret_command(get_user_input(), &command_map, &mut state);
         println!("{}", output);
     };
 }

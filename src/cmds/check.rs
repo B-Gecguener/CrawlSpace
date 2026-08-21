@@ -4,7 +4,7 @@ use crate::world::room::Room;
 use crate::world::room::Fragments;
 use crate::world::exit::Exit;
 
-pub fn execute(args: Vec<String>, state: &GameState) -> String {
+pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
 
     let room: Room = state.level.rooms.get(&state.current_room).expect("").clone();
     let mut output: String = "".to_string();
