@@ -2,6 +2,7 @@ use crate::game_loop::GameState;
 use crate::game_loop::Level;
 use crate::world::room::Room;
 use crate::world::room::Fragments;
+use crate::world::exit::Exit;
 
 pub fn execute(args: Vec<String>, state: &GameState) -> String {
 
@@ -30,6 +31,12 @@ pub fn execute(args: Vec<String>, state: &GameState) -> String {
     for feel_frg in room.fragments.feel {
         output.push_str(&feel_frg);
         output.push_str("\n");
+    }
+
+    output.push_str("\n\nAvailable exits:\n");
+    for exit in room.exits {
+        let exit_object: &Exit = state.level.exits.get(&exit).expect("");
+        output.push_str(&exit_object.name);
     }
     
     output
