@@ -1,12 +1,16 @@
 use crate::game_loop::GameState;
 use crate::game_loop::Level;
-use crate::world::room::Room;
-use crate::world::room::Fragments;
 use crate::world::exit::Exit;
+use crate::world::room::Fragments;
+use crate::world::room::Room;
 
 pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
-
-    let room: Room = state.level.rooms.get(&state.current_room).expect("").clone();
+    let room: Room = state
+        .level
+        .rooms
+        .get(&state.current_room)
+        .expect("")
+        .clone();
     let mut output: String = "".to_string();
 
     output.push_str("\n\nYou see:\n");
@@ -18,7 +22,7 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
     output.push_str("\n\nYou hear:\n");
     for hear_frg in room.fragments.hear {
         output.push_str(&hear_frg);
-        output.push_str("\n");   
+        output.push_str("\n");
     }
 
     output.push_str("\n\nYou smell:\n");
@@ -38,6 +42,6 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
         let exit_object: &Exit = state.level.exits.get(&exit).expect("");
         output.push_str(&exit_object.name);
     }
-    
+
     output
 }
