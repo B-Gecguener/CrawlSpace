@@ -2,7 +2,7 @@ use std::io;
 
 pub fn get_user_input() -> String {
     let mut input = String::new();
-    
+
     println!("---------------------");
 
     io::stdin()

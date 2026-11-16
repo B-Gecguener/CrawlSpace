@@ -1,11 +1,12 @@
-use crate::cmds;
 use crate::cmd_interpreter::CommandFn;
+use crate::cmds;
 use crate::helper::get_user_input;
 use std::collections::HashMap;
+use std::io::{self, Write};
 use std::{fs, path::PathBuf};
 
-
 pub fn game_start() -> (PathBuf, HashMap<String, CommandFn>) {
+    clear_screen();
     greet_user();
 
     let level = level_selection();
@@ -76,4 +77,10 @@ fn create_command_map() -> HashMap<String, CommandFn> {
 
     println!("Commands loaded.");
     command_map
+}
+
+fn clear_screen() {
+    // \x1B[2J clears the screen, \x1B[3J clears scrollback, \x1B[H moves cursor to top-left
+    print!("\x1B[2J\x1B[3J");
+    io::stdout().flush().unwrap();
 }
