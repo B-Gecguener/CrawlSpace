@@ -7,10 +7,10 @@ use crate::game_loop::GameState;
 
 pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
 
-    let mut input: String = args.join(" ");
+    let input: String = args.join(" ");
 
     let current_room_id: String = state.current_room.clone();
-    let mut exit_ids: Vec<String> = state.level.rooms.get(&current_room_id).expect("no current room").exits.clone();
+    let exit_ids: Vec<String> = state.level.rooms.get(&current_room_id).expect("no current room").exits.clone();
 
     for exit_id in exit_ids {
         let exit = state.level.exits.get(&exit_id).expect("exit does not exist");
