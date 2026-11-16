@@ -21,13 +21,19 @@ pub struct Level {
 
 pub fn run() {
     let (level, command_map) = game_start(); // added game_start here
-    println!(
-        "Start loading {} ...",
-        level.file_name().unwrap().to_string_lossy()
-    );
 
     let mut state: GameState = create_level(level);
-
+    println!(
+        "{}",
+        cmd_interpreter::interpret_command("check".to_string(), &command_map, &mut state)
+    );
+    // getting all commands in a sorted list
+    let mut names: Vec<&str> = command_map.keys().map(|k| k.as_str()).collect();
+    names.sort();
+    println!(
+        "what do you want to do? your available options are: {}",
+        names.join(", ")
+    );
     // Game loop
     loop {
         let output: String =
