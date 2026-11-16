@@ -1,3 +1,3 @@
-pub mod move_;
-pub mod help;
 pub mod check;
+pub mod help;
+pub mod move_;
