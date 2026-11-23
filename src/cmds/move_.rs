@@ -30,8 +30,8 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
 
             state.current_room = target_room;
             output.push_str(&format!("Moving through {}\n", input));
-            // calls check, im not sure about if passing args here works
-            output.push_str(&format!("{}", check::execute(args, state)));
+            // calls check
+            output.push_str(&format!("{}", check::execute(Vec::new(), state)));
 
             return output;
         }
