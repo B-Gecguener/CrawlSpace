@@ -1,7 +1,5 @@
 use crate::game_loop::GameState;
-use crate::game_loop::Level;
 use crate::world::exit::Exit;
-use crate::world::room::Fragments;
 use crate::world::room::Room;
 
 pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
@@ -22,28 +20,28 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
                     output.push_str(&see_frg);
                     output.push_str(". \n");
                 }
-            },
+            }
             "hear" => {
                 output.push_str("You hear ");
                 for hear_frg in room.fragments.hear {
                     output.push_str(&hear_frg);
                     output.push_str(". \n");
                 }
-            },
+            }
             "smell" => {
                 output.push_str("You smell ");
                 for smell_frg in room.fragments.smell {
                     output.push_str(&smell_frg);
                     output.push_str(". \n");
                 }
-            },
+            }
             "feel" => {
                 output.push_str("You feel ");
                 for feel_frg in room.fragments.feel {
                     output.push_str(&feel_frg);
                     output.push_str(". \n");
                 }
-            },
+            }
             _ => {
                 output.push_str("The option ");
                 output.push_str(sense);
