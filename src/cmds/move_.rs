@@ -32,7 +32,7 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
             };
 
             state.current_room = target_room;
-
+            println!("")
             return format!("Moving through {}", input).to_string();
         }
     }
