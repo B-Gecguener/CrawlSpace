@@ -1,12 +1,9 @@
-use crate::world::exit::Exit;
-use crate::world::room::Room;
-use std::collections::HashMap;
-use std::collections::hash_map::Keys;
-
+use crate::cmds::check;
 use crate::game_loop::GameState;
 
 pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
     let input: String = args.join(" ");
+    let mut output: String = "".to_string();
 
     let current_room_id: String = state.current_room.clone();
     let exit_ids: Vec<String> = state
@@ -32,10 +29,12 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
             };
 
             state.current_room = target_room;
+            output.push_str(&format!("Moving through {}\n", input));
+            // calls check, im not sure about if passing args here works
+            output.push_str(&format!("{}", check::execute(args, state)));
 
-            return format!("Moving through {}", input).to_string();
+            return output;
         }
     }
-
-    return format!("There is no exit named {}", input).to_string();
+    return format!("There is no exit named {}", input);
 }
