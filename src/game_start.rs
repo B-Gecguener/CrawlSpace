@@ -68,14 +68,10 @@ fn level_selection() -> PathBuf {
 }
 
 fn create_command_map() -> HashMap<String, CommandFn> {
-    println!("Loading commands ...");
     let mut command_map: HashMap<String, CommandFn> = HashMap::new();
-
     command_map.insert("help".into(), cmds::help::execute);
     command_map.insert("move".into(), cmds::move_::execute);
     command_map.insert("check".into(), cmds::check::execute);
-
-    println!("Commands loaded.");
     command_map
 }
 

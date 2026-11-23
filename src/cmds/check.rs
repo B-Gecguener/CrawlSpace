@@ -57,10 +57,11 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
         output.push_str(".\n");
     }
 
-    output.push_str("\nYou can exit this room through \n");
+    output.push_str("\nYou can exit this room through ");
     for exit in room.exits {
         let exit_object: &Exit = state.level.exits.get(&exit).expect("");
         output.push_str(&exit_object.name);
+        output.push_str("\n");
     }
 
     output

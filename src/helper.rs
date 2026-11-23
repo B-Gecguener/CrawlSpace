@@ -7,7 +7,7 @@ pub fn get_user_input() -> String {
         .read_line(&mut input)
         .expect("Failed to read input");
 
-    println!("---------------------");
+    println!("@--------------------------------------------------------------------@\n");
 
     input.trim().to_owned() // Der Rust-"Style", das letzte Statement ohne ";" wird automatisch returned
 }

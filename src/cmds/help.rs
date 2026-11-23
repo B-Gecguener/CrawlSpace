@@ -1,6 +1,6 @@
 use crate::game_loop::GameState;
 
-pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
+pub fn execute(args: Vec<String>, _state: &mut GameState) -> String {
     if args.is_empty() {
         "
         help - help [command_name] - explains command, lists all if no command_name given

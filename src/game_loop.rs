@@ -31,7 +31,7 @@ pub fn run() {
     let mut names: Vec<&str> = command_map.keys().map(|k| k.as_str()).collect();
     names.sort();
     println!(
-        "what do you want to do? your available options are: {}",
+        "what do you want to do? your available options are: {}\n",
         names.join(", ")
     );
     // Game loop

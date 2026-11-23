@@ -29,7 +29,7 @@ pub fn execute(args: Vec<String>, state: &mut GameState) -> String {
             };
 
             state.current_room = target_room;
-            output.push_str(&format!("Moving through {}\n", input));
+            output.push_str(&format!("Moving through {}\n\n", input));
             // calls check
             output.push_str(&format!("{}", check::execute(Vec::new(), state)));
 
